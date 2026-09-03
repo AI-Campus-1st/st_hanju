@@ -32,7 +32,7 @@ if st.button('Generate Fake Data'):
     st.success('Fake data generated generated!')
 
 @st.cache_data
-def load_data() 
+def load_data() :
     with engine.connect() as conn:
         query = 'SELECT * FROM users'
         return pd.read_sql(query, conn)
